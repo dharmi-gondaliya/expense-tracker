@@ -4,8 +4,8 @@ A responsive and user-friendly Expense Tracker web application built with **Reac
 
 ## Features
 
-- **Add, view, and delete transactions** (income & expenses)
 <!-- - **Filter transactions** by month and category -->
+- **Add, view, and delete transactions** (income & expenses)
 - **Real-time balance** and summary of income vs. expenses
 - **Expense breakdown chart** using Recharts (Pie Chart)
 - **Dark mode** toggle for better accessibility
