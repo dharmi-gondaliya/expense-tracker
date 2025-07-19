@@ -1,6 +1,6 @@
 # Expense Tracker
 
-A responsive and user-friendly Expense Tracker web application built with **React**, **Vite**, **Tailwind CSS**, and **Recharts**. This app helps users manage their income and expenses, visualize spending patterns, and gain insights into their financial habits.
+A responsive and user-friendly Expense Tracker web application built with **React**, **Vite**,**Tailwind CSS** and **Recharts**. This app helps users manage their income and expenses, visualize spending patterns, and gain insights into their financial habits.
 
 ## Features
 
