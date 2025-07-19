@@ -8,9 +8,9 @@ import { PieChart ,Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recha
 
 const App = () => {
   const [transactions, setTransactions] = useState([
-    { id: 1, text: 'Salary', amount: 50000, category: 'Income', date: '2024-01-15' },
+    { id: 1, text: 'Petrol', amount: -1500, category: 'Transport', date: '2024-01-15' },
     { id: 2, text: 'Groceries', amount: -2000, category: 'Food', date: '2024-01-14' },
-    { id: 3, text: 'Petrol', amount: -1500, category: 'Transport', date: '2024-01-13' }
+    { id: 3, text: 'Salary', amount: 50000, category: 'Income', date: '2024-01-13' }
   ]);
   
   const [darkMode, setDarkMode] = useState(false);
@@ -65,13 +65,25 @@ const App = () => {
     return Object.entries(categoryTotals).map(([category, amount]) => ({
       name: category,
       value: amount,
-      color: getRandomColor()
+      color: getCategoryColor(category)
     }));
   };
 
-  const getRandomColor = () => {
-    const colors = ['#8884d8', '#82ca9d', '#ffc658', '#ff7c7c', '#8dd1e1', '#d084d0'];
-    return colors[Math.floor(Math.random() * colors.length)];
+  const getCategoryColor = (category) => {
+    const categoryColors = {
+      'Food': '#ff6b6b',           // Red
+      'Transport': '#4ecdc4',      // Teal
+      'Shopping': '#45b7d1',       // Blue
+      'Entertainment': '#96ceb4',   // Green
+      'Utilities': '#feca57',      // Yellow
+      'Healthcare': '#ff9ff3',     // Pink
+      'Education': '#54a0ff',      // Light Blue
+      'Income': '#5f27cd',         // Purple
+      'Other': '#9c88ff',          // Light Purple
+      'default': '#6c5ce7'         // Default Purple
+    };
+    
+    return categoryColors[category] || categoryColors['default'];
   };
 
   const chartData = generateChartData();
